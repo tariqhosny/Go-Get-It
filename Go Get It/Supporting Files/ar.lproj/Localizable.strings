@@ -5,3 +5,37 @@
   Created by Tariq on 10/20/19.
   Copyright © 2019 Tariq. All rights reserved.
 */
+"SIGN IN" = "تسجيل الدخول";
+"SIGN UP" = "تسجيل";
+"Empty Fields" = "الحقول فارغة";
+"Dismiss" = "الغاء";
+"The password must be at least 6 characters" = "كلمه السر يجب الا تقل عن ٦ احرف";
+"Please Select Size" = "الرجاء اختيار الحجم";
+"Error" = "خطأ";
+"Ok" = "حسنا";
+"Total Price:" = "السعر الكلى:";
+"Taxes:" = "الضرائب:";
+"Delivery Fees:" = "مصاريف الشحن:";
+"You Can't reduce any more!" = "لا تستطيع نقص الكميه اقل من ذلك!";
+"complete your order" = "اكمل طلبك";
+"Cancel" = "إلغاء";
+"Select Language" = "اختيار اللغه";
+"Are you sure you want to log out?" = "هل تريد تسجيل الحروج؟";
+"Log out" = "تسجيل خروج";
+"Order in Progress" = "الطلب تحت المراجعة";
+"Order Delivered" = "تم توصيل الطلب";
+"Order Canceled" = "تم إلغاء الطلب";
+"Cash on Delivered" = "الدفع عند وصول الطلب";
+"Payment by Visa" = "الدفع بالفيزا";
+"Email or Password incorrect" = "البريد الإلكتروني أو كلمة المرور غير صحيحة";
+"Invalide Email Format" = "تنسيق البريد الإلكتروني غير صحيح";
+"MEN" = "رجال";
+"WOMEN" = "سيدات";
+"KIDS" = "أطفال";
+"order:" = "الطلب:";
+"Date:" = "التاريخ:";
+"Size:" = "الحجم:";
+"Price:" = "السعر:";
+"Count:" = "العدد:";
+"en" = "ar";
+"he" = "ar";

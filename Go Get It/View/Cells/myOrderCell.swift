@@ -10,15 +10,25 @@ import UIKit
 
 class myOrderCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    @IBOutlet weak var dateLb: UILabel!
+    @IBOutlet weak var priceLb: UILabel!
+    @IBOutlet weak var numberLb: UILabel!
+    @IBOutlet weak var stateLb: UILabel!
+    
+    func configureCell(orderList: productModel) {
+        numberLb.text = "order:" + " \(orderList.order_id)"
+        dateLb.text = "Date:" + " \(orderList.created_at)"
+        priceLb.text = "Price: \(orderList.order_total_price)"
+        
+        if Int(orderList.order_stat) == 0{
+            stateLb.text = "Order in Progress"
+        }
+        if Int(orderList.order_stat) == 1{
+            stateLb.text = "Order Delivered"
+        }
+        if Int(orderList.order_stat) == 2{
+            stateLb.text = "Order Canceled"
+        }
     }
 
 }

@@ -9,20 +9,20 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import MOLH
 
 class cartApi: NSObject {
     var cartCount = Int()
     
-    class func addCartApi (id: Int,color_id: Int, size: String, completion: @escaping(_ error: Error?, _ success: Bool?)-> Void){
+    class func addCartApi (id: Int, size: String, completion: @escaping(_ error: Error?, _ success: Bool?)-> Void){
         let parametars = [
             "product_id": id,
-            "color_id": color_id,
             "product_quantity": 1,
             "size": size
             ] as [String : Any]
         let header = [
             "Accept": "application/json",
-            "Authorization": "Bearer \(helper.getUserToken().token ?? "")"
+            "Authorization": "Bearer \(helper.getUserToken() ?? "")"
         ]
         Alamofire.request(URLs.addCart, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: header).responseJSON { response in
             switch response.result
@@ -40,13 +40,13 @@ class cartApi: NSObject {
     }
     
     
-    class func listCartApi (completion: @escaping(_ error: Error?, _ data: [productsModel]?, _ totalPrice: Int?, _ taxs: Int?, _ deleveryFees: String?)-> Void){
+    class func listCartApi (completion: @escaping(_ error: Error?, _ data: [productModel]?, _ totalPrice: Float?, _ taxs: Float?, _ deleveryFees: String?)-> Void){
         let parametars = [
-            "lang": NSLocalizedString("en", comment: "")
+            "lang": "en".localized
         ]
         let header = [
             "Accept": "application/json",
-            "Authorization": "Bearer \(helper.getUserToken().token ?? "")"
+            "Authorization": "Bearer \(helper.getUserToken() ?? "")"
         ]
         Alamofire.request(URLs.cartList, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: header).responseJSON { response in
             switch response.result
@@ -63,11 +63,11 @@ class cartApi: NSObject {
                     completion(nil, nil, nil, nil,nil)
                     return
                 }
-                guard let totalPrice = data["price"]?.int else{
+                guard let totalPrice = data["price"]?.float else{
                     completion(nil, nil, nil, nil,nil)
                     return
                 }
-                guard let totalTax = data["total_tax"]?.int else{
+                guard let totalTax = data["total_tax"]?.float else{
                     completion(nil, nil, nil, nil,nil)
                     return
                 }
@@ -79,9 +79,9 @@ class cartApi: NSObject {
                     completion(nil, nil, nil, nil,nil)
                     return
                 }
-                var cartData = [productsModel]()
+                var cartData = [productModel]()
                 list.forEach({
-                    if let dict = $0.dictionary, let product = productsModel(dict: dict) {
+                    if let dict = $0.dictionary, let product = productModel(dict: dict) {
                         cartData.append(product)
                     }
                 })
@@ -97,7 +97,7 @@ class cartApi: NSObject {
         ]
         let header = [
             "Accept": "application/json",
-            "Authorization": "Bearer \(helper.getUserToken().token ?? "")"
+            "Authorization": "Bearer \(helper.getUserToken() ?? "")"
         ]
         Alamofire.request(URLs.plusCart, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: header).responseJSON { response in
             switch response.result
@@ -121,7 +121,7 @@ class cartApi: NSObject {
         ]
         let header = [
             "Accept": "application/json",
-            "Authorization": "Bearer \(helper.getUserToken().token ?? "")"
+            "Authorization": "Bearer \(helper.getUserToken() ?? "")"
         ]
         Alamofire.request(URLs.minCart, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: header).responseJSON { response in
             switch response.result
@@ -145,7 +145,7 @@ class cartApi: NSObject {
         ]
         let header = [
             "Accept": "application/json",
-            "Authorization": "Bearer \(helper.getUserToken().token ?? "")"
+            "Authorization": "Bearer \(helper.getUserToken() ?? "")"
         ]
         Alamofire.request(URLs.deleteCart, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: header).responseJSON { response in
             switch response.result
@@ -162,13 +162,13 @@ class cartApi: NSObject {
         }
     }
     
-    class func cartCountApi (completion: @escaping(_ error: Error?, _ data: [productsModel]?)-> Void){
+    class func cartCountApi (completion: @escaping(_ error: Error?, _ data: [productModel]?)-> Void){
         let parametars = [
-            "lang": NSLocalizedString("en", comment: "")
+            "lang": "en".localized
         ]
         let header = [
             "Accept": "application/json",
-            "Authorization": "Bearer \(helper.getUserToken().token ?? "")"
+            "Authorization": "Bearer \(helper.getUserToken() ?? "")"
         ]
         Alamofire.request(URLs.cartList, method: .post, parameters: parametars, encoding: URLEncoding.default, headers: header).responseJSON { response in
             switch response.result
@@ -189,9 +189,9 @@ class cartApi: NSObject {
                     completion(nil, nil)
                     return
                 }
-                var cartData = [productsModel]()
+                var cartData = [productModel]()
                 list.forEach({
-                    if let dict = $0.dictionary, let product = productsModel(dict: dict) {
+                    if let dict = $0.dictionary, let product = productModel(dict: dict) {
                         cartData.append(product)
                     }
                 })

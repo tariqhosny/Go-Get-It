@@ -7,32 +7,33 @@
 //
 
 import UIKit
-import MOLH
 import IQKeyboardManagerSwift
+import Kingfisher
+import MOLH
 
-@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate {
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
         MOLH.shared.activate(true)
         IQKeyboardManager.shared.enable = true
+        
         // Override point for customization after application launch.
         return true
     }
-
-    func reset() {
-        let rootviewcontroller: UIWindow = ((UIApplication.shared.delegate?.window)!)!
-        let stry = UIStoryboard(name: "Main", bundle: nil)
-        rootviewcontroller.rootViewController = stry.instantiateViewController(withIdentifier: "home")
-    }
-    
     // MARK: UISceneSession Lifecycle
 
+    @available(iOS 13.0, *)
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
+    @available(iOS 13.0, *)
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
@@ -41,4 +42,8 @@ import IQKeyboardManagerSwift
 
 
 }
-
+extension String{
+    var localized: String{
+        NSLocalizedString(self, comment: "")
+    }
+}

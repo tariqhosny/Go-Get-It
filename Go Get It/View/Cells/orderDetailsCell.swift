@@ -10,15 +10,21 @@ import UIKit
 
 class orderDetailsCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var productImage: UIImageView!
+    @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var productPrice: UILabel!
+    @IBOutlet weak var count: UILabel!
+    
+    func configureCell(product: productModel) {
+        productName.text = product.product_name
+        productPrice.text = "Price:".localized + " \(product.product_price)"
+        count.text = "Count:".localized + " \(product.product_quantity)"
+        let urlWithoutEncoding = ("\(URLs.file_root)\(product.image)")
+        let encodedLink = urlWithoutEncoding.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
+        let encodedURL = NSURL(string: encodedLink!)! as URL
+        productImage.kf.indicatorType = .activity
+        if let url = URL(string: "\(encodedURL)") {
+            productImage.kf.setImage(with: url)
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

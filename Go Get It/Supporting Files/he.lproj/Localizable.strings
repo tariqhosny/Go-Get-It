@@ -5,3 +5,37 @@
   Created by Tariq on 10/20/19.
   Copyright © 2019 Tariq. All rights reserved.
 */
+"SIGN IN" = "היכנס";
+"SIGN UP" = "הירשם";
+"Empty Fields" = "שדות ריקים";
+"Dismiss" = "לשחרר";
+"The password must be at least 6 characters" = "הסיסמה חייבת לכלול לפחות 6 תווים";
+"Please Select Size" = "אנא בחר גודל";
+"Error" = "שגיאה";
+"Ok" = "בסדר";
+"Total Price:" = "מחיר סופי:";
+"Taxes:" = "מיסים:";
+"Delivery Fees:" = "דמי משלוח:";
+"You Can't reduce any more!" = "אתה לא יכול לצמצם יותר!";
+"complete your order" = "השלם את ההזמנה שלך";
+"Cancel" = "בטל";
+"Select Language" = "בחר שפה";
+"Are you sure you want to log out?" = "האם אתה בטוח שברצונך להתנתק?";
+"Log out" = "להתנתק";
+"Order in Progress" = "סדר בתהליך";
+"Order Delivered" = "ההזמנה הועברה";
+"Order Canceled" = "ההזמנה בוטלה";
+"Cash on Delivered" = "מזומנים שנמסרו";
+"Payment by Visa" = "תשלום באמצעות ויזה";
+"Email or Password incorrect" = "אימייל או סיסמא שגויים";
+"Invalide Email Format" = "פורמט דוא\"ל לא חוקי";
+"MEN" = "גברים";
+"WOMEN" = "נשים";
+"KIDS" = "ילדים";
+"order:" = "להזמין:";
+"Date:" = "תאריך:";
+"Size:" = "גודל:";
+"Price:" = "מחיר:";
+"Count:" = "לספור:";
+"en" = "he";
+"ar" = "he";
