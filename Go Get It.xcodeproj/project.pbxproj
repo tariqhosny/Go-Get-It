@@ -25,6 +25,7 @@
 		528C04FA234603E200F1995C /* profileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C04F7234603E000F1995C /* profileApi.swift */; };
 		528C04FB234603E200F1995C /* cartApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C04F8234603E000F1995C /* cartApi.swift */; };
 		528C04FC234603E200F1995C /* orderApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C04F9234603E100F1995C /* orderApi.swift */; };
+		5293448F23700D6800AAB058 /* paymentWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5293448E23700D6800AAB058 /* paymentWebView.swift */; };
 		529666FA234B60F600D514AA /* cartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529666F9234B60F600D514AA /* cartCell.swift */; };
 		52977AEA234F528600310E8C /* BadgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52977AE9234F528600310E8C /* BadgeButton.swift */; };
 		5297A4852341F50E003B44B8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5297A4842341F50E003B44B8 /* SWRevealViewController.m */; };
@@ -83,6 +84,7 @@
 		528C04F7234603E000F1995C /* profileApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileApi.swift; sourceTree = "<group>"; };
 		528C04F8234603E000F1995C /* cartApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cartApi.swift; sourceTree = "<group>"; };
 		528C04F9234603E100F1995C /* orderApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = orderApi.swift; sourceTree = "<group>"; };
+		5293448E23700D6800AAB058 /* paymentWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = paymentWebView.swift; sourceTree = "<group>"; };
 		529666F9234B60F600D514AA /* cartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cartCell.swift; sourceTree = "<group>"; };
 		52977AE9234F528600310E8C /* BadgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeButton.swift; sourceTree = "<group>"; };
 		5297A4822341F50C003B44B8 /* Go Get It-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Go Get It-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				52CAFF1C2343721C00B3378A /* allProducts.swift */,
 				52CAFF16234370A400B3378A /* cart.swift */,
 				52C28D5823534F2700BA4D17 /* createOrder.swift */,
+				5293448E23700D6800AAB058 /* paymentWebView.swift */,
 				52CAFF222343727F00B3378A /* myOrders.swift */,
 				520B23792354B30A00B33B7B /* orderDetails.swift */,
 				52CAFF18234371D000B3378A /* filterCategory.swift */,
@@ -464,6 +467,7 @@
 				52D2CB5F235DC89F00EC54A1 /* SceneDelegate.swift in Sources */,
 				520B237A2354B30A00B33B7B /* orderDetails.swift in Sources */,
 				5297A48B234205F5003B44B8 /* sliderCell.swift in Sources */,
+				5293448F23700D6800AAB058 /* paymentWebView.swift in Sources */,
 				5297A4872341F866003B44B8 /* home.swift in Sources */,
 				5297A49123421379003B44B8 /* homeApi.swift in Sources */,
 				528B28152344D9090036E2AF /* allProductsCell.swift in Sources */,

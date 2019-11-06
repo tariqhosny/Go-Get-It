@@ -144,10 +144,10 @@ extension myOrders: UITableViewDelegate, UITableViewDataSource{
             self.orderState = "Order Canceled".localized
         }
         
-        if Int(orders[indexPath.row].payment_status) == 0{
-            self.paymentMethod = "Payment by Visa".localized
+        if Int(orders[indexPath.row].payment_status) == 1{
+            self.paymentMethod = "Payment Online".localized
         }
-        if Int(orders[indexPath.row].payment_method) == 1{
+        if Int(orders[indexPath.row].payment_method) == 2{
             self.paymentMethod = "Cash on Delivered".localized
         }
         

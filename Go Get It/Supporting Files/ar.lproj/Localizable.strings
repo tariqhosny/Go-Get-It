@@ -26,7 +26,6 @@
 "Order Delivered" = "تم توصيل الطلب";
 "Order Canceled" = "تم إلغاء الطلب";
 "Cash on Delivered" = "الدفع عند وصول الطلب";
-"Payment by Visa" = "الدفع بالفيزا";
 "Email or Password incorrect" = "البريد الإلكتروني أو كلمة المرور غير صحيحة";
 "Invalide Email Format" = "تنسيق البريد الإلكتروني غير صحيح";
 "MEN" = "رجال";
@@ -39,3 +38,9 @@
 "Count:" = "العدد:";
 "en" = "ar";
 "he" = "ar";
+"payment Failed" = "فشل عمليه الدفع";
+"Congratulation!" = "مبروك";
+"Your order done" = "تم اتمام الطلب";
+"Faild" = "خطأ";
+"Please select the payment method" = "الرجاء اختيار طريقة الدفع";
+"Payment Online" = "الدفع ببطاقه الائتمان";

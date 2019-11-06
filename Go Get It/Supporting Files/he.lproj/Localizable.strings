@@ -39,3 +39,9 @@
 "Count:" = "לספור:";
 "en" = "he";
 "ar" = "he";
+"Faild" = "נכשל";
+"Please select the payment method" = "בחר את אמצעי התשלום";
+"Congratulation!" = "מזל טוב!";
+"Your order done" = "ההזמנה שלך בוצעה";
+"payment Failed" = "התשלום נכשל";
+"Payment Online" = "תשלום מקוון";

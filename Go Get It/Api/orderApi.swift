@@ -13,14 +13,14 @@ import MOLH
 
 class orderApi: NSObject {
     
-    class func createOrderApi (totalPrice: Float, phone: String, region: String, city: String, country: String, street: String, latidude: Float, langitude: Float, department: String, floor_number: String,home_number: String,completion: @escaping(_ error: Error?, _ success: Bool?)-> Void){
+    class func createOrderApi (totalPrice: Float, phone: String, region: String, city: String, country: String, street: String, latidude: Float, langitude: Float, department: String, floor_number: String,home_number: String,method: Int, completion: @escaping(_ error: Error?, _ success: Bool?)-> Void){
         let parametars = [
             "order_total_price": totalPrice,
             "customer_address": region,
             "customer_phone": phone,
             "langtude": latidude,
             "lattude": langitude,
-            "payment_method": 1,
+            "payment_method": method,
             "payment_status": 1,
             "customer_city": city,
             "customer_country": country,

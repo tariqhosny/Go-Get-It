@@ -13,6 +13,7 @@ class imagesViewer: UIViewController {
     @IBOutlet weak var images: UIImageView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var imagesCollectionView: UICollectionView!
+    @IBOutlet weak var sliderNumber: UILabel!
     
     var image = [productModel]()
     var productID = Int()
@@ -22,7 +23,7 @@ class imagesViewer: UIViewController {
         super.viewDidLoad()
         
         print(index)
-        
+        sliderNumber.text = "[\(index+1):\(image.count)]"
         view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(onDrage(_:))))
         
         imagesHandleRefresh()
@@ -133,4 +134,10 @@ extension imagesViewer: UICollectionViewDelegate, UICollectionViewDataSource, UI
         return CGSize.init(width: collectionView.frame.size.width, height: collectionView.frame.height)
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.tag == 0{
+            let indexNum = Int(scrollView.contentOffset.x / imagesCollectionView.frame.size.width)
+            sliderNumber.text = "[\(indexNum+1):\(image.count)]"
+        }
+    }
 }

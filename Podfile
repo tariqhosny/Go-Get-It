@@ -5,7 +5,7 @@ target 'Go Get It' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Style Cosmetics
+  # Pods for Go Get It
   pod 'Cosmos', '~> 19.0'
   pod 'Alamofire'
   pod 'SwiftyJSON'
